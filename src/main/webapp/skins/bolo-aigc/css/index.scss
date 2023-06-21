@@ -1,0 +1,44 @@
+.home-container {
+  width: 100%;
+
+  .card .card-content {
+    padding: 1rem;
+  }
+
+  .article-list {
+    .module-cards-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .module-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      font-weight: bold;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-right: 20px;
+      }
+
+      span {
+        line-height: 40px;
+      }
+    }
+
+    .card-wrap {
+        &:hover {
+            background-color: aquamarine;
+            transform: scale(1.1);
+            transition: all .3s;
+        }
+    }
+  }
+}
