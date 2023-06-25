@@ -1,10 +1,3 @@
-<#-- Solo - A small and beautiful blogging system written in Java. Copyright (c) 2010-present, b3log.org This program is
-    free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
-    warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
-    details. You should have received a copy of the GNU Affero General Public License along with this program. If not,
-    see <https://www.gnu.org/licenses/>. -->
 <#include "../../common-template/macro-common_head.ftl">
 
 <!DOCTYPE html>
@@ -21,6 +14,7 @@
         <link rel="stylesheet" href="${staticServePath}/js/lib/swiper.min.css">
         <script src='${staticServePath}/js/lib/swiper.min.js'></script>
         <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="icon" href="${staticServePath}/images/favicon.png">
     </@head>
     <#-- <#include "style.theme.ftl"> -->
 </head>
@@ -35,6 +29,7 @@
                         style="margin-left: 10px">
                         <div class="columns">
                             <div class="column is-12-tablet is-12-desktop is-12-widescreen has-order-2 column-main">
+                                <#include "header.ftl">
                                 <#include "article-list.ftl">
                             </div>
                         </div>

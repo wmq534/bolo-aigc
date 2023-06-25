@@ -21,7 +21,8 @@
 .detail-container .card-wrap-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .detail-container #b3_solo_h1_0 {
   display: none !important;
@@ -29,9 +30,22 @@
 .detail-container #jumpBtn {
   cursor: pointer;
   text-align: left;
-  line-height: 40px;
-  padding: 5px;
+  line-height: 32px;
+  padding: 5px 20px;
   background-color: #e6e8ed;
+  border-radius: 4px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
-
-/*# sourceMappingURL=detail.css.map */
+.detail-container #jumpBtn svg {
+  margin-left: 10px;
+}
+.detail-container #jumpBtn:hover {
+  color: white;
+  background-color: #333;
+}
+.detail-container #jumpBtn:hover svg {
+  transform: translateX(10px);
+  transition: all 0.3s;
+}

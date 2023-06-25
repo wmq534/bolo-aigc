@@ -1,7 +1,13 @@
 $(document).ready(function() {
-    const menuList = $('.menu-list li');
+    const menuList = $('#sideMenu .menu-list li');
     console.log('ready', menuList);
     menuList.on('click', (evt) => {// 为左侧导航添加事件
+        const type = evt?.currentTarget.dataset.uri;
+        location.href = `${location.origin}/bolo#article-module-${type}`;
+    });
+
+    const menuList1 = $('#aigcAllCategoryDropdown .menu-list li');
+    menuList1.on('click', (evt) => {// 为左侧导航添加事件
         const type = evt?.currentTarget.dataset.uri;
         location.href = `${location.origin}/bolo#article-module-${type}`;
     });
@@ -89,4 +95,14 @@ $(document).ready(function() {
             window.open(evt.currentTarget.dataset.url, '_blank');
         })
     }
+
+    $('#aigcAllCategoryTab').mouseover((evt) => {
+        $('#aigcAllCategoryDropdown').css(
+            'display', 'block');
+    });
+
+    $('#aigcAllCategoryTab').mouseout((evt) => {
+        $('#aigcAllCategoryDropdown').css(
+            'display', 'none');
+    })
 })

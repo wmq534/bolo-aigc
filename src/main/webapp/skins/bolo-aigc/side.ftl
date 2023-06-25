@@ -20,19 +20,29 @@
 
 
 <div class="column is-4-tablet is-4-desktop  is-3-widescreen has-order-1  column-left <%= sticky_class(position) %>">
-    <div class="card widget">
+    <div class="card widget flex-vertical">
+        <div class="header-logo">
+            <a href="${servePath}">
+                <div class="card-image flex-h align-center">
+                    <img src="${staticServePath}/images/logo.png"></img>
+                    <span>AI俱乐部</span>
+                </div>
+            </a>
+        </div>
         <div class="card-content">
-            <div class="menu">
+            <div id="sideMenu" class="menu">
                 <ul class="menu-list">
                     <#list mostUsedCategories as category>
-                        <li data-desc="${category.categoryDescription}" data-uri="${category.categoryURI}" data-title="${category.categoryTitle}">
-                            <div class="level is-marginless">
-                                <img src="${category.categoryDescription}" />
-                                <span class="level-start">
-                                    <span class="level-item">${category.categoryTitle}</span>
-                                </span>
-                            </div>
-                        </li>
+                        <#if category.categoryURI!='special'>
+                            <li data-desc="${category.categoryDescription}" data-uri="${category.categoryURI}" data-title="${category.categoryTitle}">
+                                <div class="level is-marginless">
+                                    <img src="${category.categoryDescription}" />
+                                    <span class="level-start">
+                                        <span class="level-item">${category.categoryTitle}</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </#if>
                     </#list>
                 </ul>
             </div>

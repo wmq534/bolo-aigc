@@ -1,36 +1,3 @@
-<#--
-
-    Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
--->
-<#-- Bolo - A stable and beautiful blogging system based in Solo. Copyright (c) 2020, https://github.com/adlered This
-    program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public
-    License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
-    version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
-    implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
-    for more details. You should have received a copy of the GNU Affero General Public License along with this program.
-    If not, see <https://www.gnu.org/licenses/>. -->
-    <#-- Solo - A small and beautiful blogging system written in Java. Copyright (c) 2010-present, b3log.org This
-        program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General
-        Public License as published by the Free Software Foundation, either version 3 of the License, or (at your
-        option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY
-        WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-        Affero General Public License for more details. You should have received a copy of the GNU Affero General Public
-        License along with this program. If not, see <https://www.gnu.org/licenses/>. -->
 <#include "../../common-template/macro-common_head.ftl">
 <#include "macro-comments.ftl">
 <#include "../../common-template/macro-comment_script.ftl">
@@ -51,7 +18,7 @@
             <#-- <#include "style.theme.ftl"> -->
         </head>
             <body class="is-3-column">
-                <!-- <#include "header.ftl"> -->
+                <#include "header.ftl">
                 <script>
                     var loggedIn = ${article.logged};
                 </script>
@@ -63,16 +30,20 @@
                                 <div  class="column is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd has-order-2 column-main">
                                     <div class="card">
                                         <div class="card-content article card-wrap" style="width: 100%">
+                                            <#if article.articleTags!='special'>
                                             <div class="card-wrap-img">
                                                 <img src="${article.articleImg1URL}" ></img>
                                             </div>
+                                            </#if>
                                             <div class="card-wrap-content">
                                                 <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                                                   <#if article.articleTags!='special'>
                                                     <div class="level-left">
-                                                        <div class="level-item has-text-grey">
-                                                            ${article.articleCategory}
+                                                            <div class="level-item has-text-grey">
+                                                                ${article.articleCategory}
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                   </#if>
                                                 </div>
                                                 <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
                                                     ${article.articleTitle}
@@ -86,20 +57,27 @@
                                                 <div id="articleContent" class="content post-article">
                                                     ${article.articleContent}
                                                 </div>
-                                                <div id="jumpBtn" class="content post-article">项目官网</div>
+                                                <#if article.articleTags!='special'>
+                                                    <div id="jumpBtn" class="content post-article">
+                                                        <span>项目官网</span>
+                                                        <svg xmlns="https://codegeex.cn" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                                                            <polyline points="6 17 12 12 6 7"/>
+                                                        </svg>
+                                                    </div>
+                                                </#if>
                                             </div>
                                             
                                         </div>
                                     </div>
                                     <#if interactive == "on">
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <h3 class="title is-5 has-text-weight-normal">评论</h3>
-                                            <@comments commentList=articleComments article=article
-                                                count=article.articleCommentCount>
-                                            </@comments>
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <h3 class="title is-5 has-text-weight-normal">评论</h3>
+                                                <@comments commentList=articleComments article=article
+                                                    count=article.articleCommentCount>
+                                                </@comments>
+                                            </div>
                                         </div>
-                                    </div>
                                     </#if>
                                 </div>
                             </div>
