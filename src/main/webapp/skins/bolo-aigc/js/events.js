@@ -49,7 +49,7 @@ $(document).ready(function() {
                 const cells = map[type];
                 return `
                     <div class="module" data-type="${type}" style="display: block;" id="article-module-${type}">
-                        <div class="module-title"><img src="${item.desc}"><span>${item.title}</span></img></div>
+                        <div class="module-title"><div class="module-image"><img src="${item.desc}"></img></div><span>${item.title}</span></div>
                         <div class="module-cards-content container">${cells ? cells.map(createCell).join('') : ''}</div>
                     </div>
                 `

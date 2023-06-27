@@ -22,8 +22,7 @@
         <div class="flex-h justify-content-between">
             <div class="aigc-icon-container">
                 <div class="flex-h align-items-center">
-                    <img src="${staticServePath}/images/logo.png"></img>
-                    AI俱乐部
+                    <img src="${staticServePath}/images/logo-long.png"></img>
                 </div>
                 <div>AI俱乐部收录了国内外数百个不同类型的AI工具，每日更新和添加最新AI工具，AI工具集还推荐了AI学习开发的常用网站、框架和模型，帮助你加入人工智能浪潮，自动化高效完成任务！
                     Ctrl + D 收藏本站到浏览器书签栏。</div>

@@ -20,8 +20,23 @@
 </head>
 
 <body class="is-3-column">
-    <!-- <#include "header.ftl"> -->
-    <div class="card-normal ">
+    <div class="root-container home-container">
+        <div class="sider-left">
+            <#include "side.ftl">
+        </div>
+        <div class="main-container">
+            <div class="main-top">
+                <#include "header.ftl">
+            </div>
+            <div class="main-content">
+                <#include "article-list.ftl">
+            </div>
+            <div class="main-footer">
+                <#include "footer.ftl">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="card-normal ">
         <section class="section">
             <div class="container home-container">
                 <div class="columns">
@@ -38,7 +53,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div> -->
     <script src='${servePath}/skins/${skinDirName}/js/events.js'></script>
 </body>
 

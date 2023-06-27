@@ -603,18 +603,23 @@ textarea {
   cursor: pointer;
   color: #515c6b;
   padding: 5px 10px;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 1.33rem;
+}
+.menu-list li .level .menu-image {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-right: 15px;
 }
 .menu-list li .level:hover {
   background-color: rgb(224, 224, 224);
   color: blue;
 }
 .menu-list li img {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  margin-right: 15px;
+  width: 100%;
+  height: 100%;
 }
 
 .card-normal .card {
@@ -2163,7 +2168,7 @@ footer .button {
   font-size: 30px;
 }
 .footer .aigc-icon-container img {
-  width: 40px;
+  width: auto;
   height: 40px;
   margin-right: 20px;
 }
