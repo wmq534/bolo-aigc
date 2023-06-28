@@ -72,7 +72,7 @@ $(document).ready(function() {
                                         ${article.articletitle}
                                     </div>
                                     <div class="description">
-                                        ${article.articleabstracttext.substr(0, 24)}
+                                        ${article.articleabstracttext?.substr(0, 24)}
                                     </div>
                                 </div>
                             </div>
