@@ -1,9 +1,50 @@
 .detail-container {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+
+    .header-container {
+        margin: 0;
+    }
+
+    .sider-left {
+        width: 300px;
+        flex: none;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .main-container {
+        height: 100%;
+        overflow: auto;
+    }
+
+    code {
+        max-width: 1000px;
+        white-space: break-spaces;
+    }
+
+    .main-content {
+
+    }
+
+    .main-content-header {
+        padding: 0 24px;
+    }
+
+    .vditor-copy {
+        display: none;
+    }
 
     .article {
         display: flex;
         flex-direction: row;
+    }
+
+    #articleContent {
+        padding: 24px;
     }
 
     .card-wrap-img {
@@ -26,10 +67,6 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-    }
-
-    #b3_solo_h1_0 {
-        display: none !important;
     }
 
     #jumpBtn {

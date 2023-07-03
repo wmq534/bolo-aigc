@@ -41,7 +41,13 @@
         </div>
         <div>
             <div class="footer-copyright text-xs flex-h align-center">
-                Copyright © 2023 &nbsp;&nbsp;<a href="https://ai-fun.vip" title="AI俱乐部" class="flex-h align-center" rel="home">AI俱乐部</a>&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" class="flex-h align-center" rel="link noopener">蜀ICP备2022019184号-2</a>&nbsp; &nbsp;            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702003349" target="_blank" class="flex-h align-center" rel="noopener"><img style="margin-bottom: 3px;" src="https://ai-fun.vip/wp-content/themes/onenav/images/gaba.png"> 川公网安备 51010702003349号</a></div>
+                Copyright © 2023 &nbsp;&nbsp;
+                <a href="https://ai-fun.vip" title="AI俱乐部" class="flex-h align-center" rel="home">AI俱乐部</a>&nbsp;
+                <a href="https://beian.miit.gov.cn/" target="_blank" class="flex-h align-center" rel="link noopener">蜀ICP备2022019184号-2</a>&nbsp; &nbsp;
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010702003349" target="_blank" class="flex-h align-center" rel="noopener">
+                    <img style="margin-bottom: 3px;" src="${servePath}/images/gaba.png"> 川公网安备 51010702003349号
+                </a>
+            </div>
         </div>
     </div>
 </footer>

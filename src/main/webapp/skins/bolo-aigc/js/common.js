@@ -25,7 +25,7 @@
         element.style.transition = '0s';
         element.style.opacity = '0';
     });
-    document.querySelector('body > .navbar').style.transform = 'translateY(-100px)';
+    document.querySelector('body > .navbar')?.style.transform = 'translateY(-100px)';
     ['.column-main > .card',
      '.column-left > .card, .column-right-shadow > .card',
      '.column-right > .card'].map(function (selector) {

@@ -38,11 +38,26 @@
         <link rel="stylesheet" href="${staticServePath}/js/lib/swiper.min.css">
         <script src='${staticServePath}/js/lib/swiper.min.js'></script>
     </@head>
-    <#-- <#include "style.theme.ftl"> -->
 </head>
 
 <body class="is-3-column">
-<#include "header.ftl">
+<div class="root-container category-articles-container">
+    <div class="sider-left">
+        <#include "side.ftl">
+    </div>
+    <div class="main-container">
+        <div class="main-top">
+            <#include "header.ftl">
+        </div>
+        <div class="main-content">
+            <#include "article-list.ftl">
+        </div>
+        <div class="main-footer">
+            <#include "footer.ftl">
+        </div>
+    </div>
+</div>
+
 <div class="card-normal">
     <section class="section">
         <div class="container">
@@ -64,6 +79,7 @@
 </div>
 <a id="back-to-top" title="返回顶部" href="javascript:"><i class="fas fa-chevron-up"></i></a>
 <#include "footer.ftl">
+<script src='${servePath}/skins/${skinDirName}/js/events.js'></script>
 </body>
 
 </html>
